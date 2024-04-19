@@ -1,0 +1,12 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <table border = '2'>
+            <tr><th>Name</th><th>Age</th><th>Sity</th></tr>
+            {% for values in context.values()%}
+            <tr><td>{{values['name']}}</td><td>{{values['age']}}</td><td>{{values['sity']}}</td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

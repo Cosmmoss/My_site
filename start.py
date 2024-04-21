@@ -3,16 +3,17 @@ app = Flask (__name__)
 users = {
    '1': {'name': 'Ivan',
        'age': 18,
-       'sity': 'Moscow'},
-   '2': {'name': 'Boris',
-       'age': 20,
-       'sity': 'Krasnodar'},
-   '3': {'name': 'Inna',
-       'age': 25,
-       'sity': 'Yalta'},
-    '4': {'name': 'Oleg',
-       'age': 42,
-       'sity': 'Tula'}
+       'sity': 'Moscow',
+       'is_active': ['Активен', 'Не активен']},
+#    '2': {'name': 'Boris',
+#        'age': 20,
+#        'sity': 'Krasnodar'},
+#    '3': {'name': 'Inna',
+#        'age': 25,
+#        'sity': 'Yalta'},
+#     '4': {'name': 'Oleg',
+#        'age': 42,
+#        'sity': 'Tula'}
 }
 # Отображение маршрута для вывода главной страницы
 @app.route('/')

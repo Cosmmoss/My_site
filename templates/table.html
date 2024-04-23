@@ -3,9 +3,9 @@
     </head>
     <body>
         <table border = '2'>
-            # Заглавная строка с названиями столбцов таблицы
+            <!-- Заглавная строка с названиями столбцов таблицы-->
             <tr><th>Name</th><th>Age</th><th>Sity</th><th>Is_active</th></tr>
-            # Цикл для включения данных по каждому польователю в таблицу построчно
+            <!--Цикл для включения данных по каждому польователю в таблицу построчно-->
             {% for values in context.values()%}
             <tr><td>{{values['name']}}</td><td>{{values['age']}}</td><td>{{values['sity']}}</td>
             <td>{{values['is_active'][1]}}</td></tr>

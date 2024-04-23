@@ -4,7 +4,7 @@ users = {
    '1': {'name': 'Ivan',
        'age': 18,
        'sity': 'Moscow',
-       'is_active': ['Активен', 'Не активен']},
+       'is_active': ['Не активен', 'Активен']},
 #    '2': {'name': 'Boris',
 #        'age': 20,
 #        'sity': 'Krasnodar'},
@@ -17,7 +17,7 @@ users = {
 }
 # Отображение маршрута для вывода главной страницы
 @app.route('/')
-def index():
+def page():
     return render_template('page.html')
 
 # Отображение маршрута для вывода таблицы пользователей
@@ -59,6 +59,14 @@ def users_all():
        i = str(i)
        users_all += f"Имя - {users[i]['name']}, возраст - {users[i]['age']}, город - {users[i]['sity']}; "
     return users_all
+# Страницу contacts.html “прикрутил” к сайту
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html')
+# Страницу index.html “прикрутил” к сайту
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

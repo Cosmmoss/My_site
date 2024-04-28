@@ -5,15 +5,18 @@ users = {
        'age': 18,
        'sity': 'Moscow',
        'is_active': ['Не активен', 'Активен']},
-#    '2': {'name': 'Boris',
-#        'age': 20,
-#        'sity': 'Krasnodar'},
-#    '3': {'name': 'Inna',
-#        'age': 25,
-#        'sity': 'Yalta'},
-#     '4': {'name': 'Oleg',
-#        'age': 42,
-#        'sity': 'Tula'}
+    '2': {'name': 'Boris',
+        'age': 20,
+        'sity': 'Krasnodar',
+        'is_active': ['Не активен', 'Активен']},
+    '3': {'name': 'Inna',
+        'age': 25,
+        'sity': 'Yalta',
+        'is_active': ['Не активен', 'Активен']},
+    '4': {'name': 'Oleg',
+        'age': 42,
+        'sity': 'Tula',
+        'is_active': ['Не активен', 'Активен']}
 }
 # Отображение маршрута для вывода главной страницы
 @app.route('/')

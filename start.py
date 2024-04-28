@@ -4,19 +4,19 @@ users = {
    '1': {'name': 'Ivan',
        'age': 18,
        'sity': 'Moscow',
-       'is_active': ['Не активен', 'Активен']},
+       'is_active': 1},
     '2': {'name': 'Boris',
         'age': 20,
         'sity': 'Krasnodar',
-        'is_active': ['Не активен', 'Активен']},
+        'is_active': 1},
     '3': {'name': 'Inna',
         'age': 25,
         'sity': 'Yalta',
-        'is_active': ['Не активен', 'Активен']},
+        'is_active': 1},
     '4': {'name': 'Oleg',
         'age': 42,
         'sity': 'Tula',
-        'is_active': ['Не активен', 'Активен']}
+        'is_active': 1}
 }
 # Отображение маршрута для вывода главной страницы
 @app.route('/')
@@ -37,7 +37,7 @@ def user(id):
         return f"Здравствуйте, {users[id]['name']}, ваш номер {id}, ваш возраст - {users[id]['age']},\
         вы живёте в {users[id]['sity']}"
     
-# Определение маршрута для добавления нового пользователя    
+# Добавление нового пользователя    
 @app.route('/add_user')
 def add_user():
     # Получение данных о новом пользователе из запроса
@@ -62,6 +62,7 @@ def users_all():
        i = str(i)
        users_all += f"Имя - {users[i]['name']}, возраст - {users[i]['age']}, город - {users[i]['sity']}; "
     return users_all
+
 # Страницу contacts.html “прикрутил” к сайту
 @app.route('/contacts')
 def contacts():
